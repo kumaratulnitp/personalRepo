@@ -29,7 +29,7 @@ public class KthLargestElement {
 			return null;
 //		Comparator<? super Comparator<Integer>> comparator = 
 	//			(Comparator<Integer> i1, Comparator<Integer> i2) -> i1.compare(o1, o2) > 0 ? i1: i2;
-		//PriorityQueue<Integer> maxElements = new PriorityQueue<Integer>(comparator);
+		//PriorityQueue<Integer> maxElements = new PriorityQueue<Integer>((x,y) -> x-y);
 		PriorityQueue<Integer> maxElements = new PriorityQueue<Integer>(k, Collections.reverseOrder());
 		elements.stream().forEach(i -> {
 			maxElements.offer(i);
