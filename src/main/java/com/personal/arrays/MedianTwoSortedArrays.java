@@ -15,6 +15,7 @@ public class MedianTwoSortedArrays {
 		System.out.println(obj.binarySearchIterative(arr, 13));
 		System.out.println(obj.binarySearchIterative(arr, 44));
 		
+		//{2,3,4,5,6,9} => median = middle element = (4+5) / 2
 		int[] a = new int[] {2, 3, 5};
 		int[] b = new int[] {1, 6, 7};
 		System.out.println("*********");
