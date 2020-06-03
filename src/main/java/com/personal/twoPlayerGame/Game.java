@@ -5,5 +5,5 @@ public interface Game {
 	void player2Turn();
 	boolean isGameOver();
 	Player findWinner();
-	
+	void initialize();
 }

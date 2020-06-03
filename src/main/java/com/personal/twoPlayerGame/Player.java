@@ -1,5 +1,7 @@
 package com.personal.twoPlayerGame;
 
+import java.util.List;
+
 import lombok.Getter;
 import lombok.Setter;
 
@@ -7,6 +9,7 @@ import lombok.Setter;
 @Setter
 public class Player {
 	private String name;
+	private List<Piece> piece;
 	public void playTurn(Move move) {
 		//do something
 	}
