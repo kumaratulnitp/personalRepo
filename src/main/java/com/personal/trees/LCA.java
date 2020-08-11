@@ -1,5 +1,17 @@
 package com.personal.trees;
 
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.HashMap;
+import java.util.LinkedList;
+import java.util.Map;
+import java.util.PriorityQueue;
+import java.util.Queue;
+import java.util.concurrent.BlockingQueue;
+import java.util.concurrent.CopyOnWriteArrayList;
+import java.util.concurrent.LinkedBlockingDeque;
+import java.util.concurrent.atomic.AtomicInteger;
+
 public class LCA {
 
 	public static int count = 2 ;
@@ -16,6 +28,34 @@ public class LCA {
 		
 		LCA o = new LCA();
 		
+		Queue<String> q = new LinkedList<String>();
+		Comparator<? super String> comp = (String a, String b) -> b.compareToIgnoreCase(a);
+		q = new PriorityQueue<String>(11, comp );
+		
+		q.offer("e");
+		q.add("f");
+		q.offer("a");
+		System.out.println(q.peek());
+		System.out.println(q.poll());
+		System.out.println(q.poll());
+		System.out.println(q.poll());
+		
+		CopyOnWriteArrayList<String> cw = new CopyOnWriteArrayList<String>();
+		cw.add("a");
+		cw.add("b");
+		
+		BlockingQueue<Integer> bq = new LinkedBlockingDeque<Integer>();
+		bq.offer(3);
+		bq.offer(4);
+		bq.offer(1);
+		AtomicInteger ai = new AtomicInteger(0);
+		int i = ai.get();
+		ai.set(i+20);
+		Map<Integer, Integer> m = new HashMap<Integer, Integer>();
+		ArrayList<String> strings = new ArrayList<String>();
+		strings.add("asdf");
+		strings.get(0);
+		strings.get(10);
 		System.out.println(o.lca(t1, 2, 13).data);
 		
 	}
